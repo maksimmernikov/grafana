@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
 )
 
 func init() {
@@ -41,7 +41,7 @@ func getTeamSelectSqlBase() string {
 		team.org_id,
 		team.name as name,
 		team.email as email,
-		(SELECT COUNT(*) from team_member where team_member.team_id = team.id) as member_count 
+		(SELECT COUNT(*) from team_member where team_member.team_id = team.id) as member_count
 		FROM team as team `
 }
 

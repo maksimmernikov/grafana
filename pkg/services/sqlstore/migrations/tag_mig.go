@@ -1,6 +1,6 @@
 package migrations
 
-import . "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import . "github.com/maksimmernikov/grafana/pkg/services/sqlstore/migrator"
 
 func addTagMigration(mg *Migrator) {
 

@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/search"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/search"
+	"github.com/maksimmernikov/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/util"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

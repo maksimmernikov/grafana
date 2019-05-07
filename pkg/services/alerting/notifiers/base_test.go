@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/alerting"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/alerting"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

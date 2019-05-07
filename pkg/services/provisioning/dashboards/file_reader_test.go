@@ -1,7 +1,7 @@
 package dashboards
 
 import (
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/util"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/dashboards"
 
-	"github.com/grafana/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/log"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -4,11 +4,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/alerting"
-	"github.com/grafana/grafana/pkg/services/alerting/notifiers"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/alerting"
+	"github.com/maksimmernikov/grafana/pkg/services/alerting/notifiers"
+	"github.com/maksimmernikov/grafana/pkg/services/sqlstore"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

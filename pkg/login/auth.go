@@ -3,9 +3,9 @@ package login
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	LDAP "github.com/grafana/grafana/pkg/services/ldap"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	LDAP "github.com/maksimmernikov/grafana/pkg/services/ldap"
 )
 
 var (

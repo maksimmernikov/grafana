@@ -5,12 +5,12 @@ import (
 	"sync"
 
 	"github.com/BurntSushi/toml"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/maksimmernikov/grafana/pkg/util/errutil"
 	"golang.org/x/xerrors"
 
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 type Config struct {

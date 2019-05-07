@@ -3,7 +3,7 @@ package metrics
 import (
 	"runtime"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 
 	"github.com/prometheus/client_golang/prometheus"
 )

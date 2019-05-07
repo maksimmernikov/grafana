@@ -1,14 +1,14 @@
 package api
 
 import (
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/util"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/plugins"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 // getFrontendSettingsMap returns a json object with all the settings needed for front end initialisation.

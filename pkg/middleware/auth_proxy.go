@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	authproxy "github.com/grafana/grafana/pkg/middleware/auth_proxy"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/infra/remotecache"
+	authproxy "github.com/maksimmernikov/grafana/pkg/middleware/auth_proxy"
+	m "github.com/maksimmernikov/grafana/pkg/models"
 )
 
 const (

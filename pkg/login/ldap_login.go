@@ -1,9 +1,9 @@
 package login
 
 import (
-	"github.com/grafana/grafana/pkg/models"
-	LDAP "github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	LDAP "github.com/maksimmernikov/grafana/pkg/services/ldap"
+	"github.com/maksimmernikov/grafana/pkg/util/errutil"
 )
 
 var newLDAP = LDAP.New

@@ -3,9 +3,9 @@ package alerting
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/sqlstore"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

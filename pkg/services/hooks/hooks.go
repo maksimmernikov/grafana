@@ -1,8 +1,8 @@
 package hooks
 
 import (
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/registry"
+	"github.com/maksimmernikov/grafana/pkg/api/dtos"
+	"github.com/maksimmernikov/grafana/pkg/registry"
 )
 
 type IndexDataHook func(indexData *dtos.IndexViewData)

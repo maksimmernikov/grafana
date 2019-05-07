@@ -3,9 +3,9 @@ package search
 import (
 	"sort"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/registry"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/registry"
 )
 
 func init() {

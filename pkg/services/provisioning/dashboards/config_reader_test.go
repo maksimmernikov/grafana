@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/log"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

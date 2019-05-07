@@ -9,7 +9,7 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"golang.org/x/oauth2"
 
-	m "github.com/grafana/grafana/pkg/models"
+	m "github.com/maksimmernikov/grafana/pkg/models"
 )
 
 func TestUserAuth(t *testing.T) {

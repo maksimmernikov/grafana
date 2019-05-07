@@ -2,17 +2,17 @@ package pluginproxy
 
 import (
 	"encoding/json"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 	"net"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/plugins"
+	"github.com/maksimmernikov/grafana/pkg/util"
 )
 
 type templateData struct {

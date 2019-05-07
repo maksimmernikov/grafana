@@ -2,7 +2,7 @@ package api
 
 import (
 	"context"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/models"
 )
 
 func (server *HTTPServer) AdminProvisioningReloadDasboards(c *models.ReqContext) Response {

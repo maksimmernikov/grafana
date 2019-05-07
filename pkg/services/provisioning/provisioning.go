@@ -5,14 +5,14 @@ import (
 	"path"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/log"
 	"github.com/pkg/errors"
 
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/provisioning/dashboards"
-	"github.com/grafana/grafana/pkg/services/provisioning/datasources"
-	"github.com/grafana/grafana/pkg/services/provisioning/notifiers"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/registry"
+	"github.com/maksimmernikov/grafana/pkg/services/provisioning/dashboards"
+	"github.com/maksimmernikov/grafana/pkg/services/provisioning/datasources"
+	"github.com/maksimmernikov/grafana/pkg/services/provisioning/notifiers"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 type DashboardProvisioner interface {

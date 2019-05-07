@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 type ImageUploader interface {

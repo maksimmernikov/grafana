@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
 )
 
 func init() {

@@ -7,20 +7,20 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/services/alerting"
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/maksimmernikov/grafana/pkg/services/alerting"
+	"github.com/maksimmernikov/grafana/pkg/services/dashboards"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/dashdiffs"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/guardian"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/api/dtos"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/components/dashdiffs"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	"github.com/maksimmernikov/grafana/pkg/infra/metrics"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/plugins"
+	"github.com/maksimmernikov/grafana/pkg/services/guardian"
+	"github.com/maksimmernikov/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/util"
 )
 
 const (

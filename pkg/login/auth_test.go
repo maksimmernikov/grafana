@@ -6,8 +6,8 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	m "github.com/grafana/grafana/pkg/models"
-	LDAP "github.com/grafana/grafana/pkg/services/ldap"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	LDAP "github.com/maksimmernikov/grafana/pkg/services/ldap"
 )
 
 func TestAuthenticateUser(t *testing.T) {

@@ -1,12 +1,12 @@
 package api
 
 import (
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/teamguardian"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/api/dtos"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/teamguardian"
+	"github.com/maksimmernikov/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/util"
 )
 
 // GET /api/teams/:teamId/members

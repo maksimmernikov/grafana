@@ -1,13 +1,13 @@
 package dashboards
 
 import (
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
+	"github.com/maksimmernikov/grafana/pkg/services/provisioning/values"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	"github.com/maksimmernikov/grafana/pkg/services/dashboards"
 
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/models"
 )
 
 type DashboardsAsConfig struct {

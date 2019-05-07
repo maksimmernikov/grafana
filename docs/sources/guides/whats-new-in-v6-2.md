@@ -14,7 +14,7 @@ weight = -13
 
 > More content will be added to this guide before the stable release.
 
-For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+For all details please read the full [CHANGELOG.md](https://github.com/maksimmernikov/grafana/blob/master/CHANGELOG.md)
 
 If you use a password for your datasources please read the [upgrade notes](/installation/upgrading/#upgrading-to-v6-2).
 
@@ -82,7 +82,7 @@ This release contains a lot of small features and fixes:
 - CloudWatch - Important fix for default alias disappearing in v6.1.
 - Search - Works in a scope of dashboard's folder by default when viewing dashboard
 
-Checkout the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file for a complete list of new features, changes, and bug fixes.
+Checkout the [CHANGELOG.md](https://github.com/maksimmernikov/grafana/blob/master/CHANGELOG.md) file for a complete list of new features, changes, and bug fixes.
 
 A huge thanks to our community for all the reported issues, bug fixes and feedback.
 

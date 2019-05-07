@@ -278,7 +278,7 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: debug cache
-          command: 'ls -al /go/src/github.com/grafana/grafana/node_modules'
+          command: 'ls -al /go/src/github.com/maksimmernikov/grafana/node_modules'
       - run:
           name: prepare build tools
           command: '/tmp/bootstrap.sh'
@@ -291,7 +291,7 @@ jobs:
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
-            - /go/src/github.com/grafana/grafana/node_modules
+            - /go/src/github.com/maksimmernikov/grafana/node_modules
       - run:
           name: package grafana
           command: './scripts/build/build.sh --fast --package-only'

@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	m "github.com/maksimmernikov/grafana/pkg/models"
 )
 
 func init() {
@@ -96,19 +96,19 @@ func GetAdminStats(query *m.GetAdminStatsQuery) error {
 			(
 				SELECT COUNT(*)
 				FROM ` + dialect.Quote("user") + ` as u
-				WHERE 
-				(SELECT COUNT(*) 
-					FROM org_user 
-					WHERE org_user.user_id=u.id 
+				WHERE
+				(SELECT COUNT(*)
+					FROM org_user
+					WHERE org_user.user_id=u.id
 					AND org_user.role='` + role + `')>0
 			) as ` + alias + `,
 			(
 				SELECT COUNT(*)
 				FROM ` + dialect.Quote("user") + ` as u
-				WHERE 
-				(SELECT COUNT(*) 
-					FROM org_user 
-					WHERE org_user.user_id=u.id 
+				WHERE
+				(SELECT COUNT(*)
+					FROM org_user
+					WHERE org_user.user_id=u.id
 					AND org_user.role='` + role + `')>0
 				AND u.last_seen_at>?
 			) as active_` + alias

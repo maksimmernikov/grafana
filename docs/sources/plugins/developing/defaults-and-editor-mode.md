@@ -59,7 +59,7 @@ If you want your users to be able to change these panel values then you need to 
 
 ## Editor Mode
 
-Editor mode is when a user clicks Edit on a panel. Every panel has a general tab where you change the title and width and some panels have more inbuilt tabs like the Metrics tab or Time Range tab. A panel plugin can add its own tab(s) so that a user can customize the panel. 
+Editor mode is when a user clicks Edit on a panel. Every panel has a general tab where you change the title and width and some panels have more inbuilt tabs like the Metrics tab or Time Range tab. A panel plugin can add its own tab(s) so that a user can customize the panel.
 
 Grafana conventions mean all you need to do is to hook up an Angular template with input fields and Grafana will automatically save the values to the dashboard json and load them on dashboard load.
 
@@ -83,7 +83,7 @@ onInitEditMode() {
 
 For editor tabs html, it is best to use Grafana css styles rather than custom styles. This is to preserve the look and feel of other tabs in Grafana.
 
-Most editor tabs should use the [gf-form css class](https://github.com/grafana/grafana/blob/master/public/sass/components/_gf-form.scss) from Grafana. The example below has one row with a couple of columns and each column is wrapped in a div like this:
+Most editor tabs should use the [gf-form css class](https://github.com/maksimmernikov/grafana/blob/master/public/sass/components/_gf-form.scss) from Grafana. The example below has one row with a couple of columns and each column is wrapped in a div like this:
 
 ```html
 <div class="section gf-form-group">

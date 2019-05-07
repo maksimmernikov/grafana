@@ -3,7 +3,7 @@ package remotecache
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 	redis "gopkg.in/redis.v2"
 )
 

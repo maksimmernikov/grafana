@@ -7,9 +7,9 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/ldap.v3"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/login"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/login"
 )
 
 type mockLdapConn struct {

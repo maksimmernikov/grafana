@@ -152,7 +152,7 @@ GRAFANA_TEST_DB=postgres go test ./pkg/...
 
 ### Datasource and dashboard provisioning
 
-[Here](https://github.com/grafana/grafana/tree/master/devenv) you can find helpful scripts and docker-compose setup
+[Here](https://github.com/maksimmernikov/grafana/tree/master/devenv) you can find helpful scripts and docker-compose setup
 that will populate your dev environment for quicker testing end experimenting.
 
 ## Contribute
@@ -161,14 +161,14 @@ If you have any ideas for improvement or have found a bug, do not hesitate to op
 And if you have time, clone this repo and submit a pull request to help me make Grafana
 the kickass metrics & devops dashboard we all dream about!
 
-Read the [contributing](https://github.com/grafana/grafana/blob/master/CONTRIBUTING.md) guide then check the [`beginner friendly`](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22) label to find issues that are easy and that we would like help with.
+Read the [contributing](https://github.com/maksimmernikov/grafana/blob/master/CONTRIBUTING.md) guide then check the [`beginner friendly`](https://github.com/maksimmernikov/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22) label to find issues that are easy and that we would like help with.
 
 ## Plugin development
 
-Checkout the [Plugin Development Guide](http://docs.grafana.org/plugins/developing/development/) and checkout the [PLUGIN_DEV.md](https://github.com/grafana/grafana/blob/master/PLUGIN_DEV.md) file for changes in Grafana that relate to
+Checkout the [Plugin Development Guide](http://docs.grafana.org/plugins/developing/development/) and checkout the [PLUGIN_DEV.md](https://github.com/maksimmernikov/grafana/blob/master/PLUGIN_DEV.md) file for changes in Grafana that relate to
 plugin development.
 
 ## License
 
-Grafana is distributed under [Apache 2.0 License](https://github.com/grafana/grafana/blob/master/LICENSE).
+Grafana is distributed under [Apache 2.0 License](https://github.com/maksimmernikov/grafana/blob/master/LICENSE).
 

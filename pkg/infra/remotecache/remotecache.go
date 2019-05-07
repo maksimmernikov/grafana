@@ -7,10 +7,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/registry"
+	"github.com/maksimmernikov/grafana/pkg/services/sqlstore"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 var (

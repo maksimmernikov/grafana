@@ -6,14 +6,14 @@ import (
 	"encoding/hex"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/serverlock"
+	"github.com/maksimmernikov/grafana/pkg/infra/serverlock"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/maksimmernikov/grafana/pkg/log"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/registry"
+	"github.com/maksimmernikov/grafana/pkg/services/sqlstore"
+	"github.com/maksimmernikov/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/util"
 )
 
 func init() {

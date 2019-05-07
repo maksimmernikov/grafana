@@ -3,10 +3,10 @@ package dashboards
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/bus"
+	"github.com/maksimmernikov/grafana/pkg/models"
 
-	"github.com/grafana/grafana/pkg/services/guardian"
+	"github.com/maksimmernikov/grafana/pkg/services/guardian"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

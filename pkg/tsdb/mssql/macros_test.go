@@ -7,8 +7,8 @@ import (
 
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/maksimmernikov/grafana/pkg/components/simplejson"
+	"github.com/maksimmernikov/grafana/pkg/tsdb"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

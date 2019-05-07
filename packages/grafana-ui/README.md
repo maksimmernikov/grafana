@@ -4,7 +4,7 @@
 
 Our goal is to deliver Grafana's common UI elements for plugins developers and contributors.
 
-See [package source](https://github.com/grafana/grafana/tree/master/packages/grafana-ui) for more details.
+See [package source](https://github.com/maksimmernikov/grafana/tree/master/packages/grafana-ui) for more details.
 
 ## Installation
 

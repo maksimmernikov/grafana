@@ -8,10 +8,10 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/macaron.v1"
 
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/maksimmernikov/grafana/pkg/infra/remotecache"
+	"github.com/maksimmernikov/grafana/pkg/models"
+	"github.com/maksimmernikov/grafana/pkg/services/ldap"
+	"github.com/maksimmernikov/grafana/pkg/setting"
 )
 
 type TestLDAP struct {

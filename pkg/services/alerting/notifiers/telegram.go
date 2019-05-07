@@ -99,7 +99,9 @@ func (this *TelegramNotifier) buildMessage(evalContext *alerting.EvalContext, se
 }
 
 func (this *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.EvalContext) *m.SendWebhookSync {
-	message := fmt.Sprintf("<b>%s</b>\nState: %s\nMessage: %s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Name, evalContext.Rule.Message)
+	message := fmt.Sprintf("<b>%s</b>\n%s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Message)
+	// message := fmt.Sprintf("<b>%s</b>\nState: %s\nMessage: %s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Name, evalContext.Rule.Message)
+
 
 	ruleUrl, err := evalContext.GetRuleUrl()
 	if err == nil {
@@ -110,10 +112,10 @@ func (this *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.Eval
 		message = message + fmt.Sprintf("Image: %s\n", evalContext.ImagePublicUrl)
 	}
 
-	metrics := generateMetricsMessage(evalContext)
-	if metrics != "" {
-		message = message + fmt.Sprintf("\n<i>Metrics:</i>%s", metrics)
-	}
+	// metrics := generateMetricsMessage(evalContext)
+	// if metrics != "" {
+	// 	message = message + fmt.Sprintf("\n<i>Metrics:</i>%s", metrics)
+	// }
 
 	cmd := this.generateTelegramCmd(message, "text", "sendMessage", func(w *multipart.Writer) {
 		fw, _ := w.CreateFormField("parse_mode")

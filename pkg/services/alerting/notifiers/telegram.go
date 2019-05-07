@@ -18,7 +18,7 @@ const (
 )
 
 var (
-	telegramApiUrl = "https://api.telegram.org/bot%s/%s"
+	telegramApiUrl = "https://api.telegram.org/bot%s/%s?disable_web_page_preview=True"
 )
 
 func init() {

@@ -143,11 +143,11 @@ type SlackNotifier struct {
 func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	this.log.Info("Executing slack notification", "ruleId", evalContext.Rule.Id, "notification", this.Name)
 
-	ruleUrl, err := evalContext.GetRuleUrl()
-	if err != nil {
-		this.log.Error("Failed get rule link", "error", err)
-		return err
-	}
+	// ruleUrl, err := evalContext.GetRuleUrl()
+	// if err != nil {
+	// 	this.log.Error("Failed get rule link", "error", err)
+	// 	return err
+	// }
 
 	fields := make([]map[string]interface{}, 0)
 	fieldLimitCount := 4
@@ -174,11 +174,11 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	if evalContext.Rule.State != m.AlertStateOK { //don't add message when going back to alert state ok.
 		message += " " + evalContext.Rule.Message
 	}
-	image_url := ""
-	// default to file.upload API method if a token is provided
-	if this.Token == "" {
-		image_url = evalContext.ImagePublicUrl
-	}
+	// image_url := ""
+	// // default to file.upload API method if a token is provided
+	// if this.Token == "" {
+	// 	image_url = evalContext.ImagePublicUrl
+	// }
 
 	body := map[string]interface{}{
 		// "attachments": []map[string]interface{}{

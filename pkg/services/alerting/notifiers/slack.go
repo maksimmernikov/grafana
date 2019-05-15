@@ -181,24 +181,27 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	}
 
 	body := map[string]interface{}{
-		"attachments": []map[string]interface{}{
-			{
-				"fallback":    evalContext.GetNotificationTitle(),
-				"color":       evalContext.GetStateModel().Color,
-				"title":       evalContext.GetNotificationTitle(),
-				"title_link":  ruleUrl,
-				"text":        message,
-				"fields":      fields,
-				"image_url":   image_url,
-				"footer":      "Grafana v" + setting.BuildVersion,
-				"footer_icon": "https://grafana.com/assets/img/fav32.png",
-				"ts":          time.Now().Unix(),
-			},
-		},
+		// "attachments": []map[string]interface{}{
+		// 	{
+		// 		"fallback":    evalContext.GetNotificationTitle(),
+		// 		"color":       evalContext.GetStateModel().Color,
+		// 		"title":       evalContext.GetNotificationTitle(),
+		// 		"title_link":  ruleUrl,
+		// 		"text":        message,
+		// 		"fields":      fields,
+		// 		"image_url":   image_url,
+		// 		// "footer":      "Grafana v" + setting.BuildVersion,
+		// 		// "footer_icon": "https://grafana.com/assets/img/fav32.png",
+		// 		"ts":          time.Now().Unix(),
+		// 	},
+		// },
 		"parse": "full", // to linkify urls, users and channels in alert message.
 	}
 
 	//recipient override
+	if message != "" {
+		body["text"] = message
+	}
 	if this.Recipient != "" {
 		body["channel"] = this.Recipient
 	}

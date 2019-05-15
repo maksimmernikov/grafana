@@ -105,7 +105,7 @@ func (this *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.Eval
 
 	ruleUrl, err := evalContext.GetRuleUrl()
 	if err == nil {
-		message = message + fmt.Sprintf(" | <a href='%s'>Grafana</a>\n", ruleUrl)
+		// message = message + fmt.Sprintf(" | <a href='%s'>Grafana</a>\n", ruleUrl)
 	}
 
 	if evalContext.ImagePublicUrl != "" {

@@ -7,7 +7,7 @@ import (
 	"mime/multipart"
 	"os"
 	"path/filepath"
-	// "time"
+	"time"
 
 	"github.com/maksimmernikov/grafana/pkg/bus"
 	"github.com/maksimmernikov/grafana/pkg/log"
@@ -143,11 +143,11 @@ type SlackNotifier struct {
 func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	this.log.Info("Executing slack notification", "ruleId", evalContext.Rule.Id, "notification", this.Name)
 
-	// ruleUrl, err := evalContext.GetRuleUrl()
-	// if err != nil {
-	// 	this.log.Error("Failed get rule link", "error", err)
-	// 	return err
-	// }
+	ruleUrl, err := evalContext.GetRuleUrl()
+	if err != nil {
+		this.log.Error("Failed get rule link", "error", err)
+		return err
+	}
 
 	fields := make([]map[string]interface{}, 0)
 	fieldLimitCount := 4
@@ -174,27 +174,27 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	if evalContext.Rule.State != m.AlertStateOK { //don't add message when going back to alert state ok.
 		message += " " + evalContext.Rule.Message
 	}
-	// image_url := ""
-	// // default to file.upload API method if a token is provided
-	// if this.Token == "" {
-	// 	image_url = evalContext.ImagePublicUrl
-	// }
+	image_url := ""
+	// default to file.upload API method if a token is provided
+	if this.Token == "" {
+		image_url = evalContext.ImagePublicUrl
+	}
 
 	body := map[string]interface{}{
-		// "attachments": []map[string]interface{}{
-		// 	{
-		// 		"fallback":    evalContext.GetNotificationTitle(),
-		// 		"color":       evalContext.GetStateModel().Color,
-		// 		"title":       evalContext.GetNotificationTitle(),
-		// 		"title_link":  ruleUrl,
-		// 		"text":        message,
-		// 		"fields":      fields,
-		// 		"image_url":   image_url,
-		// 		// "footer":      "Grafana v" + setting.BuildVersion,
-		// 		// "footer_icon": "https://grafana.com/assets/img/fav32.png",
-		// 		"ts":          time.Now().Unix(),
-		// 	},
-		// },
+		"attachments": []map[string]interface{}{
+			{
+				"fallback":    evalContext.GetNotificationTitle(),
+				"color":       evalContext.GetStateModel().Color,
+				"title":       evalContext.GetNotificationTitle(),
+				"title_link":  ruleUrl,
+				"text":        message,
+				"fields":      fields,
+				"image_url":   image_url,
+				"footer":      "Grafana v" + setting.BuildVersion,
+				"footer_icon": "https://grafana.com/assets/img/fav32.png",
+				"ts":          time.Now().Unix(),
+			},
+		},
 		"parse": "full", // to linkify urls, users and channels in alert message.
 	}
 

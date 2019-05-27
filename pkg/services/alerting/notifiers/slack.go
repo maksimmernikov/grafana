@@ -201,7 +201,7 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 
 	//recipient override
 	if message != "" {
-		body["text"] = fmt.Sprintf("<%s|%s>\n%s", evalContext.GetNotificationTitle(), ruleUrl, message)
+		body["text"] = fmt.Sprintf("<%s|%s>\n%s", ruleUrl, evalContext.GetNotificationTitle(), message)
 	}
 	if this.Recipient != "" {
 		body["channel"] = this.Recipient

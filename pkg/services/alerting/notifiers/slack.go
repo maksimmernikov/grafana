@@ -7,7 +7,7 @@ import (
 	"mime/multipart"
 	"os"
 	"path/filepath"
-	"time"
+	// "time"
 
 	"github.com/maksimmernikov/grafana/pkg/bus"
 	"github.com/maksimmernikov/grafana/pkg/log"
@@ -162,45 +162,45 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 		}
 	}
 
-	if evalContext.Error != nil {
-		fields = append(fields, map[string]interface{}{
-			"title": "Error message",
-			"value": evalContext.Error.Error(),
-			"short": false,
-		})
-	}
+	// if evalContext.Error != nil {
+	// 	fields = append(fields, map[string]interface{}{
+	// 		"title": "Error message",
+	// 		"value": evalContext.Error.Error(),
+	// 		"short": false,
+	// 	})
+	// }
 
 	message := this.Mention
 	if evalContext.Rule.State != m.AlertStateOK { //don't add message when going back to alert state ok.
 		message += " " + evalContext.Rule.Message
 	}
-	image_url := ""
-	// default to file.upload API method if a token is provided
-	if this.Token == "" {
-		image_url = evalContext.ImagePublicUrl
-	}
+	// image_url := ""
+	// // default to file.upload API method if a token is provided
+	// if this.Token == "" {
+	// 	image_url = evalContext.ImagePublicUrl
+	// }
 
 	body := map[string]interface{}{
 		"attachments": []map[string]interface{}{
-			{
-				"fallback":    evalContext.GetNotificationTitle(),
-				"color":       evalContext.GetStateModel().Color,
-				"title":       evalContext.GetNotificationTitle(),
-				"title_link":  ruleUrl,
-				"text":        message,
-				"fields":      fields,
-				"image_url":   image_url,
-				"footer":      "Grafana v" + setting.BuildVersion,
-				"footer_icon": "https://grafana.com/assets/img/fav32.png",
-				"ts":          time.Now().Unix(),
-			},
-		},
+		// 	{
+		// 		"fallback":    evalContext.GetNotificationTitle(),
+		// 		"color":       evalContext.GetStateModel().Color,
+		// 		"title":       evalContext.GetNotificationTitle(),
+		// 		"title_link":  ruleUrl,
+		// 		"text":        message,
+		// 		"fields":      fields,
+		// 		"image_url":   image_url,
+		// 		"footer":      "Grafana v" + setting.BuildVersion,
+		// 		"footer_icon": "https://grafana.com/assets/img/fav32.png",
+		// 		"ts":          time.Now().Unix(),
+		// 	},
+		// },
 		"parse": "full", // to linkify urls, users and channels in alert message.
 	}
 
 	//recipient override
 	if message != "" {
-		body["text"] = message
+		body["text"] = fmt.Sprintf("<%s|%s>\n%s", evalContext.GetNotificationTitle(), ruleUrl, message)
 	}
 	if this.Recipient != "" {
 		body["channel"] = this.Recipient

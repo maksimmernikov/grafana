@@ -193,9 +193,10 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 		// 		"image_url":   image_url,
 		// 		"footer":      "Grafana v" + setting.BuildVersion,
 		// 		"footer_icon": "https://grafana.com/assets/img/fav32.png",
-		// 		"ts":          time.Now().Unix(),
-				"text": fmt.Sprintf("<%s|%s>+v1\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
-        "mrkdwn_in": ["text"],
+				// "ts":          time.Now().Unix(),
+				"text": 			 fmt.Sprintf("<%s|%s>+v1\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
+        // "mrkdwn_in": ["text"],
+        "mrkdwn_in": 	 make([]string, "text"),
 			},
 		},
 		"parse": "full", // to linkify urls, users and channels in alert message.

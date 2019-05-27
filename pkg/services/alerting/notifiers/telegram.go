@@ -99,12 +99,13 @@ func (this *TelegramNotifier) buildMessage(evalContext *alerting.EvalContext, se
 }
 
 func (this *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.EvalContext) *m.SendWebhookSync {
-	message := fmt.Sprintf("<b><a href='%s'>%s</a></b>\n%s", evalContext.GetRuleUrl(), evalContext.GetNotificationTitle(), evalContext.Rule.Message)
-
-	// ruleUrl, err := evalContext.GetRuleUrl()
+	ruleUrl, err := evalContext.GetRuleUrl()
 	// if err == nil {
 	// 	message = message + fmt.Sprintf(" | <a href='%s'>Grafana</a>\n", ruleUrl)
 	// }
+
+	message := fmt.Sprintf("<b><a href='%s'>%s</a></b>\n%s", ruleUrl, evalContext.GetNotificationTitle(), evalContext.Rule.Message)
+
 
 	if evalContext.ImagePublicUrl != "" {
 		message = message + fmt.Sprintf("Image: %s\n", evalContext.ImagePublicUrl)
@@ -138,10 +139,10 @@ func (this *TelegramNotifier) buildMessageInlineImage(evalContext *alerting.Eval
 		return nil, err
 	}
 
-	// ruleUrl, err := evalContext.GetRuleUrl()
-	// if err != nil {
-	// 	return nil, err
-	// }
+	ruleUrl, err := evalContext.GetRuleUrl()
+	if err != nil {
+		return nil, err
+	}
 
 	metrics := generateMetricsMessage(evalContext)
 	message := generateImageCaption(evalContext, ruleUrl, metrics)

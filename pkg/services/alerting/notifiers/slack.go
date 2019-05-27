@@ -184,8 +184,8 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	body := map[string]interface{}{
 		"attachments": []map[string]interface{}{
 			{
-				  "pretext": fmt.Sprintf("<%s|%s>\n%s", ruleUrl, evalContext.GetNotificationTitle(), message)
-		// 		"fallback":    evalContext.GetNotificationTitle(),
+			  "pretext": 			fmt.Sprintf("<%s|%s>\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
+				// "fallback":    evalContext.GetNotificationTitle(),
 		// 		"color":       evalContext.GetStateModel().Color,
 		// 		"title":       evalContext.GetNotificationTitle(),
 		// 		"title_link":  ruleUrl,

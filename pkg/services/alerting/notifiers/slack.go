@@ -180,6 +180,8 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	// if this.Token == "" {
 	// 	image_url = evalContext.ImagePublicUrl
 	// }
+	mrkdwn_in := make([]string, 1)
+	mrkdwn_in[0] = "text"
 
 	body := map[string]interface{}{
 		"attachments": []map[string]interface{}{
@@ -196,7 +198,7 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 				// "ts":          time.Now().Unix(),
 				"text": 			 fmt.Sprintf("<%s|%s>+v1\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
         // "mrkdwn_in": ["text"],
-        "mrkdwn_in": 	 make([]string, "text"),
+        "mrkdwn_in": 	 mrkdwn_in,
 			},
 		},
 		"parse": "full", // to linkify urls, users and channels in alert message.

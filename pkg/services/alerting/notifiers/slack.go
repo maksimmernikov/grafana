@@ -7,6 +7,7 @@ import (
 	"mime/multipart"
 	"os"
 	"path/filepath"
+	"fmt"
 	// "time"
 
 	"github.com/maksimmernikov/grafana/pkg/bus"

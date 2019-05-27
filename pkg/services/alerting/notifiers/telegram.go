@@ -99,12 +99,10 @@ func (this *TelegramNotifier) buildMessage(evalContext *alerting.EvalContext, se
 }
 
 func (this *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.EvalContext) *m.SendWebhookSync {
-	ruleUrl, err := evalContext.GetRuleUrl()
-	if err == nil {
+	ruleUrl, _ := evalContext.GetRuleUrl()
+	// if err == nil {
 		message := fmt.Sprintf("<a href='%s'><b>%s</b></a>\n%s", ruleUrl, evalContext.GetNotificationTitle(), evalContext.Rule.Message)
-	} else {
-		message := fmt.Sprintf("<b>%s</b>\n%s", evalContext.GetNotificationTitle(), evalContext.Rule.Message)
-	}
+	// }
 	// message := fmt.Sprintf("<b>%s</b>\nState: %s\nMessage: %s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Name, evalContext.Rule.Message)
 
 

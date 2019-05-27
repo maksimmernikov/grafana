@@ -11,6 +11,29 @@ Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
 ![](http://docs.grafana.org/assets/img/features/dashboard_ex1.png)
 -->
 
+================
+
+## Update grafana
+go get -u  github.com/maksimmernikov/grafana
+cd /home/webmaster/go/src/github.com/maksimmernikov/grafana
+
+go run build.go setup
+go run build.go build
+
+# Build the Frontend Assets (first time)
+# For this you need nodejs (v.6+).
+
+npm install -g yarn
+yarn install --pure-lockfile
+yarn start
+
+
+## Run
+cd /home/webmaster/go/src/github.com/maksimmernikov/grafana
+./bin/linux-amd64/grafana-server --config=./conf/grafana.ini
+
+================
+
 ## Installation
 Head to [docs.grafana.org](http://docs.grafana.org/installation/) for documentation or [download](https://grafana.com/get) to get the latest release.
 

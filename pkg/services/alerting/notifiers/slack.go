@@ -186,19 +186,19 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 	body := map[string]interface{}{
 		"attachments": []map[string]interface{}{
 			{
-		// 		"fallback":    evalContext.GetNotificationTitle(),
+				// "fallback":    evalContext.GetNotificationTitle(),
 		// 		"color":       evalContext.GetStateModel().Color,
-		// 		"title":       evalContext.GetNotificationTitle(),
-		// 		"title_link":  ruleUrl,
-		// 		"text":        message,
+				"title":       evalContext.GetNotificationTitle(),
+				"title_link":  ruleUrl,
+				"text":        message,
 		// 		"fields":      fields,
 		// 		"image_url":   image_url,
 		// 		"footer":      "Grafana v" + setting.BuildVersion,
 		// 		"footer_icon": "https://grafana.com/assets/img/fav32.png",
 				// "ts":          time.Now().Unix(),
-				"text": 			 fmt.Sprintf("<%s|%s>v\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
+				// "text": 			 fmt.Sprintf("<%s|%s>v\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
         // "mrkdwn_in": ["text"],
-        "mrkdwn_in": 	 mrkdwn_in,
+        // "mrkdwn_in": 	 mrkdwn_in,
 			},
 		},
 		"parse": "full", // to linkify urls, users and channels in alert message.

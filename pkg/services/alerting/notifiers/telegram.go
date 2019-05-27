@@ -138,10 +138,10 @@ func (this *TelegramNotifier) buildMessageInlineImage(evalContext *alerting.Eval
 		return nil, err
 	}
 
-	ruleUrl, err := evalContext.GetRuleUrl()
-	if err != nil {
-		return nil, err
-	}
+	// ruleUrl, err := evalContext.GetRuleUrl()
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	metrics := generateMetricsMessage(evalContext)
 	message := generateImageCaption(evalContext, ruleUrl, metrics)

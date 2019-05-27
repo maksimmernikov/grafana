@@ -187,7 +187,7 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 		"attachments": []map[string]interface{}{
 			{
 				// "fallback":    evalContext.GetNotificationTitle(),
-		// 		"color":       evalContext.GetStateModel().Color,
+				"color":       evalContext.GetStateModel().Color,
 				"title":       evalContext.GetNotificationTitle(),
 				"title_link":  ruleUrl,
 				"text":        message,

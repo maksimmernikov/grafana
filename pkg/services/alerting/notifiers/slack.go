@@ -194,7 +194,7 @@ func (this *SlackNotifier) Notify(evalContext *alerting.EvalContext) error {
 		// 		"footer":      "Grafana v" + setting.BuildVersion,
 		// 		"footer_icon": "https://grafana.com/assets/img/fav32.png",
 		// 		"ts":          time.Now().Unix(),
-				"text": fmt.Sprintf("<%s|%s>\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
+				"text": fmt.Sprintf("<%s|%s>+v1\n%s", ruleUrl, evalContext.GetNotificationTitle(), message),
         "mrkdwn_in": ["text"],
 			},
 		},
